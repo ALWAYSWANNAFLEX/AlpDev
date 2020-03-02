@@ -1,0 +1,20 @@
+=font($font-name, $file-name, $weight: normal, $style: normal)
+  @font-face
+    font-family: quote($font-name)
+    src: url($file-name + '.eot')
+    src: url($file-name + '.eot?#iefix')  format('embedded-opentype'),
+    url($file-name + '.woff') format('woff'),
+    url($file-name + '.ttf')  format('truetype')
+    font-weight: $weight
+    font-style: $style
+
++font("ProximaNova", "../fonts/ProximaNovaCond-Extrabld", 600)
++font("ProximaNova", "../fonts/ProximaNovaCond-Semibold")
++font("Roboto", "../fonts/Roboto-Regular")
++font("Roboto", "../fonts/Roboto-Bold", 600)
++font("Roboto", "../fonts/Roboto-Medium", 500)
++font("Roboto", "../fonts/Roboto-Italic", normal, italic)
+
+
+
+

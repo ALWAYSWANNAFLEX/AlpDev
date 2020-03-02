@@ -1,0 +1,211 @@
+@import "fonts"
+@import "slick"
+@import "slick-theme"
+h1
+    font-family: ProximaNova
+    font-size: 64px
+h2
+    font-family: ProximaNova
+    font-size: 48px
+p
+    font-family: Roboto
+    font-size: 24px
+a
+    color: inherit
+    text-decoration: none
+li
+    list-style-type: none
+$dark: #283949
+$yellow: #FFA300
+
+* 
+    margin: 0
+    padding: 0
+
+@keyframes fadeInRight 
+    0% 
+        opacity: 0
+        left: 50px
+    50%
+        opacity: .6
+        transform: rotate(7deg)
+    100% 
+        opacity: 1
+        left: 0
+        transform: rotate(0deg)
+
+    
+header
+    background-image: url(../img/bg.png)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 0 20%
+    .head
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 20px 50px 20px 0
+        margin: 0 auto
+        .contacts
+            div
+                display: flex
+                align-items: center
+                &:nth-child(2)
+                    margin-top: 10px
+                p
+                    font-family: ProximaNova
+                i
+                    font-size: 26px
+                    margin: 0 10px 0 20px
+    .ham 
+        cursor: pointer
+        -webkit-tap-highlight-color: transparent
+        transition: transform 400ms
+        user-select: none
+        position: fixed
+        right: 10px
+        z-index: 10
+        display: none
+        .top
+            stroke-dasharray: 40 160
+        .middle
+            stroke-dasharray: 40 142
+            transform-origin: 50%
+            transition: transform 400ms
+        .bottom
+            stroke-dasharray: 40 85
+            transform-origin: 50%
+            transition: transform 400ms, stroke-dashoffset 400ms
+        &.active
+            .top
+                stroke-dashoffset: -64px
+            .middle
+                transform: rotate(90deg)
+            .bottom
+                stroke-dashoffset: -64px
+            .line
+                stroke: #ffffff
+    .hamRotate
+        &.active 
+            transform: rotate(45deg)
+    .line 
+        fill: none
+        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms
+        stroke: $dark
+        stroke-width: 5.5
+        stroke-linecap: round
+    .overlay 
+        position: fixed
+        background: $dark
+        top: 0
+        right: 0
+        width: 100%
+        height: 100%
+        opacity: 0
+        transform-origin: right top
+        transform: scale(0)
+        visibility: hidden
+        transition: all 0.4s ease-in-out
+        overflow: hidden
+        &.open 
+            opacity: 0.99
+            visibility: visible
+            transform: scale(1)
+            li 
+                display: block
+                animation: fadeInRight 0.8s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards
+                animation-delay: 0.4s
+                transform: rotate(-7deg)
+                transform-origin: right bottom
+                font-family: ProximaNova
+                font-size: 26px
+                color: #ffffff
+                opacity: 0 
+                margin-top: 20px
+                &:nth-of-type(1)
+                     margin-top: 0
+                &:nth-of-type(2) 
+                    animation-delay: 0.5s
+                &:nth-of-type(3) 
+                    animation-delay: 0.6s
+                &:nth-of-type(4) 
+                    animation-delay: 0.7s
+                &:nth-of-type(5) 
+                    animation-delay: 0.8s
+                    a
+                        margin-right: 10px
+            ul
+                position: absolute
+                text-align: right
+                right: 10vw
+                bottom: 25%    
+.locked 
+    overflow: hidden
+
+nav
+    background-color: $dark
+    ul
+        max-width: 1440px
+        margin: 0 auto
+        display: flex
+        justify-content: center
+        padding: 20px 0
+        li
+            color: #ffffff
+            text-transform: uppercase
+            font-family: ProximaNova
+            font-weight: 600
+            font-size: 24px
+            margin-right: 80px
+            transition: color .3s ease
+            line-height: 29px
+            &:nth-last-child(1)
+                margin-right: 0
+            &:hover
+                color: $yellow
+                transition: color .3s ease
+            &.active
+                color: $yellow
+
+.carousel
+    .carousel-item
+        height: calc(100vh - 180px)
+        background-repeat: no-repeat
+        background-size: cover
+        outline: none
+        position: relative
+        .item-disc
+            font-family: Roboto
+            font-weight: 500
+            color: #ffffff
+            position: absolute
+            width: 500px
+            top: 20%
+            .title
+                font-size: 96px
+                line-height: 87px
+            p
+                font-size: 36px
+                line-height: 42px
+            .button
+                font-size: 24px
+                color: #000
+                background-color: $yellow
+                padding: 14px 40px
+                border-radius: 9px
+        &.item__1
+            background-image: url('../img/c-item1.png')
+            .item-disc
+                right: 40px
+        &.item__2
+            background-image: url('../img/c-item2.png')
+        &.item__3
+            background-image: url('../img/c-item3.png')
+            
+    
+@import "media768"
+@import "media320"
+                
+
+
+
