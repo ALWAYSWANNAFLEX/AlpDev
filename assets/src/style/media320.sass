@@ -1,4 +1,6 @@
 @media screen and ( max-width: 767px )
+    p
+        font-size: 15px
     header
         .head
             padding: 5px 10px 5px 0
@@ -11,3 +13,99 @@
                 display: block
     nav
         display: none
+    .carousel
+        .carousel-item
+            height: 300px
+            background-repeat: no-repeat
+            background-size: cover
+            .item_disc
+                width: 190px
+                top: 25%
+                .title
+                    font-size: 20px
+                    line-height: 90.69%
+                    font-weight: 500
+                p
+                    font-size: 11px
+                    line-height: 18px
+                    margin: 10px 0 10px 
+                    font-weight: normal
+                    &:nth-of-type(1)
+                        margin: 0
+                .button
+                    font-size: 11px
+                    padding: 7px 15px
+                    border-radius: 9px
+            &.item__1
+                .item_disc
+                    left: 12%
+        .slick-next, 
+        .slick-prev
+            &::before
+                font-size: 20px
+        .slick-next
+            right: 0px 
+        .slick-prev
+            left: 0px
+        .slick-dots
+            bottom: 10px
+            li
+                margin: 0
+                button
+                    &::before
+                        font-size: 16px
+    main 
+        padding: 25px 10px
+        .main_disc
+            width: 100%
+            padding: 30px
+            p
+                line-height: 20px
+                &:nth-of-type(2)
+                    margin-top: 20px
+    .benefits
+        padding: 90px 10px
+        .title
+            margin: 0 auto 80px
+            text-align: center
+            h1
+                display: inline-block
+        .benefits__item
+            display: flex
+            flex-direction: column
+            
+            margin-top: 70px
+            &:nth-of-type(1)
+                margin-top: 0
+            i
+                font-size: 150px
+            .poliline
+                height: 175px
+                width: 10px
+                background-color: $dark
+                margin: 0
+                display: block
+                transform: rotate(90deg)
+            .benefit_disc
+                width: 70%
+                text-align: center
+                p
+                    &:nth-of-type(2)
+                        margin-top: 16px
+            &.right
+                i
+                    order: 1
+                .poliline
+                    order: 2
+                .benefit_disc
+                    text-align: center
+                    order: 3
+                    
+
+@media screen and (max-width: 350px)
+    p
+        font-size: 13px
+    main
+        .main_disc
+            p
+                line-height: 20px   
