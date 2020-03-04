@@ -49,8 +49,10 @@ header
         display: flex
         justify-content: space-between
         align-items: center
-        padding: 20px 50px 20px 0
+        padding: 10px 50px 10px 0
         margin: 0 auto
+        img
+            width: 350px
         .contacts
             div
                 display: flex
@@ -59,8 +61,9 @@ header
                     margin-top: 10px
                 p
                     font-family: ProximaNova
+                    font-size: 16px
                 i
-                    font-size: 26px
+                    font-size: 20px
                     margin: 0 10px 0 20px
     .ham 
         cursor: pointer
@@ -155,13 +158,13 @@ nav
         margin: 0 auto
         display: flex
         justify-content: center
-        padding: 20px 0
+        padding: 10px 0
         li
             color: #ffffff
             text-transform: uppercase
             font-family: ProximaNova
             font-weight: 600
-            font-size: 24px
+            font-size: 20px
             margin-right: 80px
             transition: color .3s ease
             line-height: 29px
@@ -177,6 +180,8 @@ nav
     overflow-x: hidden
     .carousel-item
         height: calc(100vh - 180px)
+        min-height: 640px
+        max-height: 730px
         background-repeat: no-repeat
         background-size: cover
         outline: none
@@ -189,10 +194,10 @@ nav
             width: 547px
             top: 10%
             .title
-                font-size: 96px
+                font-size: 72px
                 line-height: 87px
             p
-                font-size: 36px
+                font-size: 26px
                 line-height: 42px
                 margin: 20px 0 40px
             .button
@@ -240,6 +245,7 @@ main
     margin: 0 auto
 .benefits
     padding: 90px 100px
+    overflow-x: hidden
     .title
         margin: 0 auto 80px
         text-align: center
