@@ -1,7 +1,11 @@
 @media screen and ( max-width: 767px )
     p
-        font-size: 15px
+        font-size: 14px
     header
+        position: fixed
+        top: 0
+        width: 100%
+        z-index: 2
         .head
             padding: 5px 10px 5px 0
             img
@@ -14,6 +18,7 @@
     nav
         display: none
     .carousel
+        padding-top: 40px
         .carousel-item
             min-height: 300px
             height: 300px
@@ -79,18 +84,19 @@
             &:nth-of-type(1)
                 margin-top: 0
             i
-                font-size: 100px
+                font-size: 70px
             .poliline
-                height: 10px
+                height: 7px
                 width: 100px
                 background-color: $dark
                 margin: 0
                 display: block
-                margin: 20px 0 40px 0
+                margin: 20px 0 20px 0
             .benefit_disc
                 width: 80%
                 text-align: center
                 p
+                    font-size: 14px
                     &:nth-of-type(2)
                         margin-top: 16px
             &.right
@@ -101,6 +107,8 @@
                 .benefit_disc
                     text-align: center
                     order: 3
+    #map
+        height: 200px
                     
 @media screen and (max-width: 600px)
     h1
