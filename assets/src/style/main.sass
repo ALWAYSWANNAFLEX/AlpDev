@@ -410,7 +410,7 @@ footer
                 box-shadow: inset 10px 10px 4px rgba(0, 0, 0, 0.2), inset -10px -10px 4px rgba(0, 0, 0, 0.2);
                 tramsition: all .2s ease
 .services-disc
-    padding: 30px 50px
+    padding: 30px 50px 100px
     overflow-x: hidden
     h2
         text-align: center
@@ -443,14 +443,29 @@ footer
     padding: 30px 50px
     .container
         display: grid
-        grid-template-columns: 3fr 9fr
+        grid-template-columns: 3.15fr 9fr
         margin-top: 60px
+        grid-column-gap: 112px
 .filter
     font-family: ProximaNova
     font-weight: normal
+    border-right: 6px solid $yellow
+    padding: 0 50px 0 16px
+    display: inline-block
     li
         margin-top: 20px  
-        
+        font-family: ProximaNova
+        font-size: 24px
+        color: $dark
+.portfolio-items
+    display: grid
+    grid-template-columns: repeat(3, 250px)
+    grid-column-gap: 40px
+    grid-row-gap: 40px
+    .test
+        width: 250px
+        height: 250px
+        background-color: #c4c4c4
                 
         
         
