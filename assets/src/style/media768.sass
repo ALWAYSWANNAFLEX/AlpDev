@@ -1,3 +1,17 @@
+@media screen and (min-width: 1440px)
+    .price-list
+        .price-table
+            p
+                font-size: 24px
+    .services-disc
+        .disc-item
+            img
+                width: 460px
+            p
+                font-size: 24px
+                margin-left: 100px
+            &.right
+                margin-right: 100px
 @media screen and ( max-width: 1370px)
     main 
         .main_disc
@@ -100,7 +114,7 @@
                     text-align: right    
     .feedback
         margin: 0
-        padding: 0 20px
+        padding: 0 20px 100px
         .underline
             width: 50px
             margin-top: 10px
@@ -125,4 +139,53 @@
         .slick-next
             right: 0px
         .slick-prev
-            left: 0px                
+            left: 0px
+    #map
+        height: 300px
+        .info
+            width: 280px
+            height: 210px
+            padding: 20px 20px 55px
+            .poligon
+                padding: 15px 17px
+                .item
+                    grid-column-gap: 10px
+                    grid-row-gap: 10px
+                    i
+                        font-size: 18px
+                        &.fa-whatsapp
+                            font-size: 21px
+                    p
+                        font-size: 12px                
+    footer
+        padding: 30px 20px
+    .price-list
+        padding: 50px 50px
+        .price-table
+            padding: 30px 0px 50px
+            text-align: center
+            grid-column-gap: 40px
+            grid-row-gap: 10px
+            p
+                border: 2px solid black
+                padding: 15px 10px
+                font-weight: 500
+                font-size: adpt(20, 14, 1024, 768)
+                &.dual
+                    padding: 5px 20px
+    .services-disc
+        padding: 30px 20px
+        img
+            width: adpt(360, 245, 1024, 768)
+        .disc-item
+            margin-top: 50px
+            &:nth-of-type(2)
+                margin-top: 65px
+            p
+                margin-left: adpt(60, 25, 1024, 768)
+                color: #000
+                line-height: 136%
+                font-size: adpt(18, 15, 1024, 768)
+            &.right
+                p
+                    margin-right: adpt(60, 25, 1024, 768)

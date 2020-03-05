@@ -1,5 +1,47 @@
+<footer>
+    <div class="left-side">
+        <p>"Альп-Пром"</p>
+        <div class="address">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Россия, Кемеровская область - Кузбасс,
+                пр-т Ленина, д. 152, корпус Б</p>
+        </div>
+    </div>
+    <div class="right-side">
+        <i class="fab fa-whatsapp"></i>
+        <p>+7 (923) 506 98-05</p>
+
+        <i class="fab fa-viber"></i>
+        <p>+7 (913) 123 67-73</p>
+
+        <i class="fas fa-envelope"></i>
+        <p>alpprom-kemerovo@mail.ru</p>
+
+        <i class="fas fa-envelope"></i>
+        <p>alpprom-kemerovo@yandex.ru</p>
+    </div>
+</footer>
 </body>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=a3fee15f-5bce-4f32-8f3e-be2e45d5d332&lang=ru_RU" type="text/javascript">
+</script>
+    <script type="text/javascript">
+        var cont = document.getElementById("map");
+        ymaps.ready(function () {
+            var map = new ymaps.Map('map', {
+                center: [55.355515, 86.174300],
+                zoom: 17, 
+                controls: []
+            });
+            function fitMapToViewport () {
+                map.container.fitToViewport(true);
+            }
+        });
+    </script>
 <script src="js/main.min.js"></script>
 <script>
     AOS.init();

@@ -4,6 +4,15 @@
 $dark: #283949
 $yellow: #FFA300
 
+@function adpt($before, $after, $before_width, $after_width)
+    $m : ($before - $after) / ($before_width - $after_width)
+    $b : ($after - $m * $after_width)
+    $result_vw : $m * 100vw
+    $result_px : $b+px
+    $result : $result_vw + $result_px
+    @return calc(#{$result_vw} + #{$result_px})
+
+
 h1
     font-family: ProximaNova
     font-size: 64px
@@ -238,11 +247,13 @@ main
     display: block
     height: 2px
     background-color: $dark
-    width: 600px
-    margin-top: 20px
+    width: 200px
+    margin-top: 10px
 .content
     max-width: 1440px
     margin: 0 auto
+    h1
+        text-align: center
 .benefits
     padding: 90px 100px
     overflow-x: hidden
@@ -334,9 +345,116 @@ main
                 align-content: center
                 i
                     font-size: 26px
+                    &.fa-whatsapp
+                        font-size: 30px
                 p 
                     font-weight: 500
                     font-size: 23px
+
+footer
+    background-color: $dark
+    color: #ffffff
+    padding: 30px 50px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    p
+        font-size: 14px
+    .left-side
+        i 
+            color: $yellow
+            margin-right: 7px
+        p
+            width: 270px
+            font-family: ProximaNova
+            font-weight: normal
+            font-size: 24px
+        .address
+            display: flex
+            margin-top: 10px
+            p 
+                font-size: 14px
+    .right-side
+        display: grid
+        grid-template-columns: 20px 1fr
+        grid-column-gap: 6px
+        grid-row-gap: 5px
+        align-content: center
+        i
+            font-size: 17px
+            &.fa-whatsapp
+                font-size: 20px
+.price-list
+    padding: 50px 50px
+    .price-table
+        padding: 30px 90px 50px
+        display: grid
+        grid-template-columns: 2.8fr 1.62fr 1.62fr
+        text-align: center
+        grid-column-gap: 90px
+        grid-row-gap: 20px
+        .table__title
+            background-color: $dark
+            border: none
+            color: $yellow
+        p
+            border: 2px solid black
+            padding: 15px 10px
+            font-weight: 500
+            font-size: adpt(24, 13, 1440, 1025)
+            &.dual
+                padding: adpt(2, 7, 1440, 1025) 20px
+        a
+            transition: all .2s ease
+            &:hover
+                box-shadow: inset 10px 10px 4px rgba(0, 0, 0, 0.2), inset -10px -10px 4px rgba(0, 0, 0, 0.2);
+                tramsition: all .2s ease
+.services-disc
+    padding: 30px 50px
+    overflow-x: hidden
+    h2
+        text-align: center
+    .underline
+        background-color: $yellow
+        height: 7px
+    img
+        width: adpt(460, 360, 1440, 1025)
+    .disc-item
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 50px
+        &:nth-of-type(2)
+            margin-top: 115px
+        p
+            margin-left: adpt(100, 60, 1440, 1025)
+            color: #000
+            line-height: 136%
+            font-size: adpt(24, 18, 1440, 1025)
+        &.right
+            img
+                order: 2
+            p
+                order: 1
+                margin-left: 0
+                margin-right: adpt(100, 60, 1440, 1025)
+                text-align: right
+.portfolio
+    padding: 30px 50px
+    .container
+        display: grid
+        grid-template-columns: 3fr 9fr
+        margin-top: 60px
+.filter
+    font-family: ProximaNova
+    font-weight: normal
+    li
+        margin-top: 20px  
+        
+                
+        
+        
+        
                     
             
             

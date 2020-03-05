@@ -1,6 +1,8 @@
 @media screen and ( max-width: 767px )
     p
         font-size: 14px
+    h2
+        font-size: adpt(48, 37, 767, 320)
     header
         position: fixed
         top: 0
@@ -109,6 +111,71 @@
                     order: 3
     #map
         height: 200px
+        .info
+            display: none
+    footer
+        display: block
+        p
+            font-size: 9px
+        .left-side
+            i 
+                color: $yellow
+                margin-right: 7px
+            p
+                font-size: 14px
+            .address
+                display: flex
+                margin-top: 10px
+                p 
+                    font-size: 9px
+        .right-side
+            display: grid
+            grid-template-columns: 20px 1fr
+            grid-column-gap: 6px
+            grid-row-gap: 5px
+            align-content: center
+            margin-top: 10px
+            i
+                font-size: 17px
+                &.fa-whatsapp
+                    font-size: 20px
+    .price-list
+        padding: 50px 10px
+        .price-table
+            padding: 25px 0px 50px
+            text-align: center
+            grid-column-gap: adpt(40, 10, 767, 320)
+            grid-row-gap: 10px
+            p
+                border: 2px solid black
+                padding: 15px 10px
+                font-weight: 500
+                font-size: adpt(14, 9, 767, 320)
+                height: 100%
+                box-sizing: border-box
+                align-content: center
+                &.dual
+                    padding: 15px 10px
+    .services-disc
+        padding: 30px 20px
+        img
+            width: adpt(300, 215, 767, 320)
+        .disc-item
+            margin-top: 50px
+            display: block
+            text-align: center
+            &:nth-of-type(2)
+                margin-top: 50px
+            p
+                margin-left: 0
+                margin-top: 20px
+                color: #000
+                line-height: 136%
+                font-size: adpt(18, 12, 767, 320)
+            &.right
+                p
+                    margin-right: 0
+                    text-align: center
                     
 @media screen and (max-width: 600px)
     h1
