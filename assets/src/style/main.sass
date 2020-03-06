@@ -440,12 +440,13 @@ footer
                 margin-right: adpt(100, 60, 1440, 1025)
                 text-align: right
 .portfolio
-    padding: 30px 50px
+    padding: 30px adpt(50, 30, 1440, 1025)
+    overflow-x: hidden
     .container
         display: grid
         grid-template-columns: 3.15fr 9fr
         margin-top: 60px
-        grid-column-gap: 112px
+        grid-column-gap: adpt(112, 50, 1440, 1025)
 .filter
     font-family: ProximaNova
     font-weight: normal
@@ -455,16 +456,16 @@ footer
     li
         margin-top: 20px  
         font-family: ProximaNova
-        font-size: 24px
+        font-size: adpt(24, 20, 1440, 1025)
         color: $dark
 .portfolio-items
     display: grid
-    grid-template-columns: repeat(3, 250px)
-    grid-column-gap: 40px
-    grid-row-gap: 40px
+    grid-template-columns: repeat(3, adpt(250, 200, 1440, 1025))
+    grid-column-gap: adpt(40, 20, 1440, 1025)
+    grid-row-gap: adpt(40, 20, 1440, 1025)
     .test
-        width: 250px
-        height: 250px
+        width: adpt(250, 200, 1440, 1025)
+        height: adpt(250, 200, 1440, 1025)
         background-color: #c4c4c4
                 
         

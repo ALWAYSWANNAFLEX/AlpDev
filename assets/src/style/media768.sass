@@ -12,6 +12,31 @@
                 margin-left: 100px
             &.right
                 margin-right: 100px
+    .portfolio
+        .container
+            grid-template-columns: 3.15fr 9fr
+            margin-top: 60px
+            grid-column-gap: 112px
+    .filter
+        font-family: ProximaNova
+        font-weight: normal
+        border-right: 6px solid $yellow
+        padding: 0 50px 0 16px
+        display: inline-block
+        li
+            margin-top: 20px  
+            font-family: ProximaNova
+            font-size: 24px
+            color: $dark
+    .portfolio-items
+        display: grid
+        grid-template-columns: repeat(3, 250px)
+        grid-column-gap: 40px
+        grid-row-gap: 40px
+        .test
+            width: 250px
+            height: 250px
+            background-color: #c4c4c4
 @media screen and ( max-width: 1370px)
     main 
         .main_disc
@@ -189,3 +214,32 @@
             &.right
                 p
                     margin-right: adpt(60, 25, 1024, 768)
+    .portfolio
+        .container
+            display: block
+            margin-top: 60px
+    .filter
+        font-family: ProximaNova
+        font-weight: normal
+        border-right: 0
+        border-bottom: 6px solid $yellow
+        padding: 0 0 10px 0
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        li
+            margin-top: 20px  
+            font-family: ProximaNova
+            font-size: 24px
+            color: $dark
+    .portfolio-items
+        display: grid
+        grid-template-columns: repeat(3, 250px)
+        grid-column-gap: 40px
+        grid-row-gap: 40px
+        justify-content: center
+        margin-top: 40px
+        .test
+            width: 250px
+            height: 250px
+            background-color: #c4c4c4
