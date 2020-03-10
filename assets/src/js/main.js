@@ -4,3 +4,4 @@
 //= anchor-animate.js
 //= aos.js
 //= aos-init.js
+//= toTop.js
