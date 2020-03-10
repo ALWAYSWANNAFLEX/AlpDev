@@ -184,7 +184,25 @@ nav
                 transition: color .3s ease
             &.active
                 color: $yellow
-
+.slickPrev,
+.slickNext
+    position: absolute
+    display: block
+    top: 50%
+    transform: translate(0, -50%)
+    z-index: 9
+    font-size: adpt(150, 50, 1440, 320)
+    color: #ffffff
+    opacity: .6
+    cursor: pointer
+    transition: opacity .2s ease
+    &:hover
+        opacity: 1
+        transition: opacity .2s ease
+.slickNext
+    right: adpt(40, 0, 1440, 320)
+.slickPrev
+    left: adpt(20, 0, 1440, 320)
 .carousel
     overflow-x: hidden
     .carousel-item
@@ -306,13 +324,14 @@ main
         .name
             text-align: right
             margin-top: 55px
-    .slick-next, 
-    .slick-prev
+    .slickNext, 
+    .slickPrev
+        font-size: adpt(100, 30, 1440, 320)
         &::before
             color: $dark
-    .slick-next
-        right: -45px
-    .slick-prev
+    .slickNext
+        right: -125px
+    .slickPrev
         left: -125px
 
 #map
