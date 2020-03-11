@@ -38,15 +38,11 @@ li
 
 @keyframes fadeInRight 
     0% 
-        opacity: 0
-        left: 50px
-    50%
-        opacity: .6
-        transform: rotate(7deg)
+        opacity: 1
+        transform: translate(50%, 0)
     100% 
         opacity: 1
-        left: 0
-        transform: rotate(0deg)
+        transform: translate(0, 0)
 
     
 header
@@ -54,12 +50,14 @@ header
     background-repeat: no-repeat
     background-size: cover
     background-position: 0 20%
+    position: relative
     .head
         display: flex
         justify-content: space-between
         align-items: center
         padding: 10px 50px 10px 0
         margin: 0 auto
+        z-index: 1
         img
             width: 350px
         .contacts
@@ -74,94 +72,112 @@ header
                 i
                     font-size: 20px
                     margin: 0 10px 0 20px
-    .ham 
-        cursor: pointer
-        -webkit-tap-highlight-color: transparent
+.ham 
+    cursor: pointer
+    -webkit-tap-highlight-color: transparent
+    transition: transform 400ms
+    user-select: none
+    position: fixed
+    right: 10px
+    z-index: 5
+    display: none
+    .top
+        stroke-dasharray: 40 160
+    .middle
+        stroke-dasharray: 40 142
+        transform-origin: 50%
         transition: transform 400ms
-        user-select: none
-        position: fixed
-        right: 10px
-        z-index: 9999
-        display: none
+    .bottom
+        stroke-dasharray: 40 85
+        transform-origin: 50%
+        transition: transform 400ms, stroke-dashoffset 400ms
+    &.active
         .top
-            stroke-dasharray: 40 160
+            stroke-dashoffset: -64px
         .middle
-            stroke-dasharray: 40 142
-            transform-origin: 50%
-            transition: transform 400ms
+            transform: rotate(90deg)
         .bottom
-            stroke-dasharray: 40 85
-            transform-origin: 50%
-            transition: transform 400ms, stroke-dashoffset 400ms
-        &.active
-            .top
-                stroke-dashoffset: -64px
-            .middle
-                transform: rotate(90deg)
-            .bottom
-                stroke-dashoffset: -64px
-            .line
-                stroke: #ffffff
-    .hamRotate
-        &.active 
-            transform: rotate(45deg)
-    .line 
-        fill: none
-        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms
-        stroke: $dark
-        stroke-width: 5.5
-        stroke-linecap: round
-    .overlay 
-        position: fixed
-        background: $dark
-        top: 0
-        right: 0
-        width: 50%
-        height: 100%
-        opacity: 0
-        transform-origin: right top
-        transform: scale(0)
-        visibility: hidden
-        transition: all 0.4s ease-in-out
-        overflow: hidden
-        z-index: 9998
-        &.open 
-            opacity: 0.99
-            visibility: visible
-            transform: scale(1)
-            li 
-                display: block
-                animation: fadeInRight 0.8s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards
-                animation-delay: 0.4s
-                transform: rotate(-7deg)
-                transform-origin: right bottom
-                font-family: ProximaNova
-                font-size: 26px
-                color: #ffffff
-                opacity: 0 
-                margin-top: 20px
-                &:nth-of-type(1)
-                     margin-top: 0
-                &:nth-of-type(2) 
-                    animation-delay: 0.5s
-                &:nth-of-type(3) 
-                    animation-delay: 0.6s
-                &:nth-of-type(4) 
-                    animation-delay: 0.7s
-                &:nth-of-type(5) 
-                    animation-delay: 0.8s
-                    a
-                        margin-right: 10px
-            ul
-                position: absolute
-                text-align: right
-                right: 10vw
-                bottom: 25%    
+            stroke-dashoffset: -64px
+.hamRotate
+    &.active 
+        transform: rotate(45deg)
+.line 
+    fill: none
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms
+    stroke: $dark
+    stroke-width: 5.5
+    stroke-linecap: round
+.overlay 
+    position: fixed
+    background: #ffffff
+    top: 0
+    right: 0
+    width: 50%
+    height: 100%
+    opacity: .8
+    transform-origin: right 
+    transform: translate(100%, 0)
+    visibility: hidden
+    transition: all 0.3s ease-in-out
+    overflow: hidden
+    z-index: 4
+    .overlayBorder
+        width: 100%
+        height: 3px
+        background-color: #000
+    li
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        font-family: ProximaNova
+        font-size: adpt(26, 12, 767, 320)
+        color: #000
+        opacity: 0 
+        padding: 10px 0
+        padding-right: adpt(30, 15, 767, 320)
+        i
+            font-size: 30px
+            margin-left: 4px
+
+                
+    &.open 
+        opacity: 0.99
+        visibility: visible
+        transform: scale(1)
+        li
+            animation: fadeInRight 0.2s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards
+            animation-delay: 0.4s
+            transform: rotate(-7deg)
+            transform-origin: right bottom 
+            &:nth-of-type(1)
+                 margin-top: 0
+            &:nth-of-type(2) 
+                animation-delay: 0.5s
+            &:nth-of-type(3) 
+                animation-delay: 0.6s
+            &:nth-of-type(4) 
+                animation-delay: 0.7s
+            &:nth-of-type(5) 
+                animation-delay: 0.8s
+    ul
+        text-align: right
+        padding: 60px 0
 .locked 
     overflow: hidden
+.darken
+    background-color: rgba(0, 0, 0, 0.8)
+    width: 100%
+    height: 500%
+    position: absolute
+    z-index: 3
+    
 
 nav
     background-color: $dark
+    position: absolute
+    top: 81.6px
+    width: 100%
+    z-index: 10
     ul
         max-width: 1440px
         margin: 0 auto
@@ -190,7 +206,7 @@ nav
     display: block
     top: 50%
     transform: translate(0, -50%)
-    z-index: 9
+    z-index: 1
     font-size: adpt(150, 50, 1440, 320)
     color: #ffffff
     opacity: .6
@@ -204,6 +220,7 @@ nav
 .slickPrev
     left: adpt(20, 0, 1440, 320)
 .carousel
+    padding-top: 49px
     overflow-x: hidden
     .carousel-item
         height: calc(100vh - 180px)
@@ -270,6 +287,7 @@ main
 .content
     max-width: 1440px
     margin: 0 auto
+    padding-top: 49px
     h1
         text-align: center
 .benefits
@@ -551,8 +569,8 @@ footer
     text-align: center
     border-radius: 4px
     position: fixed
-    bottom: 30px
-    right: 30px
+    bottom: adpt(30, 10, 1440, 320)
+    right: adpt(30, 10, 1440, 320)
     transition: all .3s ease
     cursor: pointer
     opacity: 0
