@@ -6,28 +6,43 @@
         <div class="container">
             <div>
                 <ul class="filter">
-                    <li class="active"><a href="#grid" data-target="anchor" data-filter="*">Все</a></li>
-                    <li><a href="#grid" data-target="anchor" data-filter=".uteplenie">Утепление стен</a></li>
-                    <li><a href="#grid" data-target="anchor" data-filter=".uteplenie">Ремонт межпанельных швов</a></li>
-                    <li><a href="#grid" data-target="anchor" data-filter=".uteplenie">Ремонт фасада</a></li>
-                    <li><a href="#grid" data-target="anchor" data-filter=".uteplenie">Монтаж/демонтаж наружной рекламы</a></li>
-                    <li><a href="#grid" data-target="anchor" data-filter=".uteplenie">Покраска</a></li>
-                    <li><a href="#grid" data-target="anchor" data-filter=".uteplenie">Мойка окон и фасадов</a></li>
-                    <li><a href="#grid" data-target="anchor" data-filter=".uteplenie">Монтаж и ремонт балконных козырьков</a></li>
-                    <li><a href="#grid" data-target="anchor" data-filter=".uteplenie">Ремонт балконных плит</a></li>
-                    <li><a href="#grid" data-target="anchor" data-filter=".uteplenie">Гидроизоляция балконной плиты</a></li>
-                    <li><a href="#grid" data-target="anchor" data-filter=".uteplenie">Монтаж/демонтаж металлоконструкций</a></li>
+                    <li class="active"><a href="#grid" data-filter="*">Все</a></li>
+                    <li><a href="#grid" data-filter=".walls">Утепление стен</a></li>
+                    <li><a href="#grid" data-filter=".fix-seams">Ремонт межпанельных швов</a></li>
+                    <li><a href="#grid" data-filter=".fix-facade">Ремонт фасада</a></li>
+                    <li><a href="#grid" data-filter=".mounting-ads">Монтаж/демонтаж наружной рекламы</a></li>
+                    <li><a href="#grid" data-filter=".colorize">Покраска</a></li>
+                    <li><a href="#grid" data-filter=".wash">Мойка окон и фасадов</a></li>
+                    <li><a href="#grid" data-filter=".uteplenie">Монтаж и ремонт балконных козырьков</a></li>
+                    <li><a href="#grid" data-filter=".uteplenie">Ремонт балконных плит</a></li>
+                    <li><a href="#grid" data-filter=".uteplenie">Гидроизоляция балконной плиты</a></li>
+                    <li><a href="#grid" data-filter=".uteplenie">Монтаж/демонтаж металлоконструкций</a></li>
                 </ul>
             </div>
-            <div>
+            <div class="centrelize">
                 <div class="portfolio-items" id="grid">
-                    <div class="test"></div>
-                    <div class="test"></div>
-                    <div class="test"></div>
-                    <div class="test"></div>
-                    <div class="test"></div>
-                    <div class="test"></div>
+                    <div data-modal="#modal1" class="p-item walls" ></div> 
+                    <div data-modal="#modal2" class="p-item fix-seams" ></div>
+                    <div data-modal="#modal3" class="p-item fix-facade" ></div>
+                    <div data-modal="#modal4" class="p-item colorize" ></div>
+                    <div data-modal="#modal5" class="p-item fix-facade" ></div>
+                    <div data-modal="#modal6" class="p-item mounting-ads" ></div>
+                    <div data-modal="#modal7" class="p-item wash" ></div>
+                    <div data-modal="#modal8" class="p-item walls" ></div>
+                    <div data-modal="#modal9" class="p-item fix-facade" ></div>
+                    <div data-modal="#modal10" class="p-item fix-seams" ></div>
+                    <div data-modal="#modal1" class="p-item wash" ></div>
+                    <div data-modal="#modal1" class="p-item colorize" ></div>
+                    <div data-modal="#modal1" class="p-item walls" ></div>
+                    <div data-modal="#modal1" class="p-item fix-seams" ></div>
                 </div>
+            </div>
+            <div class="modals">
+                <div class='modal' id='modal1'>
+                    <div class="img"></div>
+                    <div class="img"></div>
+                    <div class="img"></div>
+                </div>	
             </div>
         </div>
     </div>
