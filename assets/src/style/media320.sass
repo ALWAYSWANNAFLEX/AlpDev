@@ -209,7 +209,38 @@
             width: 250px
             height: 250px
     .centrelize
-        padding-left: adpt(250, 35, 767, 320)                  
+        padding-left: adpt(250, 35, 767, 320) 
+    .overlay-modal
+        .modal
+            padding: 40px 10px 40px  
+            .close-modal
+                top: 6px
+                right: 10px
+                width: 20px
+                height: 20px
+                opacity: .6
+                cursor: pointer
+                &:hover
+                    opacity: 1
+                &::before,
+                &::after
+                    position: absolute
+                    left: 15px
+                    content: ' '
+                    height: 20px
+                    width: 2px
+                    background-color: #333
+                &::before
+                    transform: rotate(45deg)
+                &::after
+                    transform: rotate(-45deg)
+            .nav-carousel
+                padding-left: 3px
+                width: 100%
+                .img
+                    width: 70px
+                    height: adpt(80, 50, 767, 320)
+                    margin-right: 10px        
 @media screen and (max-width: 600px)
     h1
         font-size: 21px
