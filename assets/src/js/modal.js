@@ -5,7 +5,6 @@ $(".modal").each( function(){
 $(".p-item").on('click', function(e){
 	e.preventDefault();
 	e.stopImmediatePropagation;
-	$("body").toggleClass("locked");
 	var $this = $(this),
             modal = $($this).data("modal");
 	
