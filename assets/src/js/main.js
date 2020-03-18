@@ -9,4 +9,4 @@
 //= isotope.pkgd.min.js
 //= filter.js
 //= modal.js
-//= ymap.js
+
